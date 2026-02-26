@@ -34,7 +34,7 @@ export default function Home() {
               backgroundClip: "text",
             }}
           >
-            Welcome to Webflow Cloud limbourg
+            Welcome to Webflow Cloud Van den Bossche 
           </h1>
           <Block tag="p" className="margin-bottom-24px">
             This is a simple test using Basic components with enhanced styling.
