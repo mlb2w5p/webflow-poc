@@ -1,0 +1,200 @@
+.navbar {
+  position: fixed;
+  left: 0px;
+  top: 24px;
+  right: 0px;
+  background-color: hsla(0, 0.00%, 86.67%, 0.00);
+}
+
+.navbar2_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-columns: 0.375fr 1fr 0.375fr;
+  grid-template-rows: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar2_container {
+    display: flex;
+    grid-template-columns: 0.25fr 1fr;
+  }
+}
+
+.navbar2_logo-link {
+  padding-left: 0rem;
+}
+
+.navbar2_menu {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar2_menu {
+    position: absolute;
+
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    padding: 1rem 5% 2.5rem;
+    justify-content: center;
+
+    border-bottom: 1px solid var(--\<unknown\|relume-variable-color-scheme-1-border\>);
+
+    background-color: var(--\<unknown\|relume-variable-color-scheme-1-background\>);
+
+    background-clip: border-box;
+    -webkit-text-fill-color: inherit;
+  }
+}
+
+.navbar2_menu.is-page-height-tablet {
+  grid-column-gap: 1px;
+  grid-row-gap: 1px;
+  border-radius: 20px;
+  background-color: var(--_color---semantic--navigation--background);
+  box-shadow: 0 5px 18px 2px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width: 991px) {
+  .navbar2_menu.is-page-height-tablet {
+    height: 100dvh;
+    padding-bottom: 6.5rem;
+    transition: height 500ms ease;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar2_menu.is-page-height-tablet {
+    padding-bottom: 6rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar2_menu.is-page-height-tablet {
+    height: 100dvh;
+    padding-bottom: 6.5rem;
+    transition: height 500ms ease;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar2_menu.is-page-height-tablet {
+    padding-bottom: 6rem;
+  }
+}
+
+.navbar-link {
+  padding: 8px 12px;
+  border-radius: 100px;
+  transition: background-color 300ms cubic-bezier(.55, .055, .675, .19);
+}
+
+.navbar-link:hover {
+  background-color: var(--_color---semantic--navigation--hover);
+}
+
+.navbar-link:global(.w--current) {
+  border-style: solid;
+  border-width: 2px;
+  border-color: hsla(0, 0.00%, 100.00%, 0.30);
+  background-image: linear-gradient(135deg, #77c0a8, #009680);
+  color: var(--_color---semantic--text--primary-inverse);
+}
+
+.navbar2_button-wrapper {
+  display: flex;
+  margin-left: 1rem;
+  grid-column-gap: 1rem;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar2_button-wrapper {
+    align-items: center;
+  }
+}
+
+.navbar2_menu-button {
+  padding: 0rem;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar2_menu-button {
+    padding: 0rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .navbar2_menu-button:global(.w--open) {
+    background-color: var(--\<unknown\|relume-variable-transparent\>);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .menu-icon2 {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    margin-right: -0.5rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .menu-icon2_line-top {
+    width: 24px;
+    height: 2px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    background-color: var(--\<unknown\|relume-variable-color-scheme-1-text\>);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .menu-icon2_line-middle {
+    display: flex;
+    width: 24px;
+    height: 2px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--\<unknown\|relume-variable-color-scheme-1-text\>);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .menu-icon2_line-middle-inner {
+    width: 4px;
+    height: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .menu-icon2_line-bottom {
+    width: 24px;
+    height: 2px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    background-color: var(--\<unknown\|relume-variable-color-scheme-1-text\>);
+  }
+}
