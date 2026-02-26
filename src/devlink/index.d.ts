@@ -5,6 +5,7 @@ console.warn(
 );
 
 export * as _Builtin from "./_Builtin";
+export * from "./CardComponent";
 export * from "./CardRecipe";
 export * from "./devlink";
 export * from "./devlinkContext";
