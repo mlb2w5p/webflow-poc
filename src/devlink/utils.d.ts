@@ -5,7 +5,6 @@ export declare const cj: (
   ...classNames: (string | boolean | undefined)[]
 ) => string;
 export declare const removeUnescaped: (value: string) => string;
-export declare const formatNumber: (num: number, decimals: unknown) => string;
 export declare const replaceSelector: (
   selector: string,
   styles: CSSModules

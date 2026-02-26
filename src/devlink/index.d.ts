@@ -5,7 +5,7 @@ console.warn(
 );
 
 export * as _Builtin from "./_Builtin";
-export * from "./CardComponent";
+export * from "./Button";
 export * from "./CardRecipe";
 export * from "./devlink";
 export * from "./devlinkContext";
@@ -14,3 +14,4 @@ export * from "./Footer";
 export * from "./interactions";
 export * from "./Navbar";
 export * from "./utils";
+export * from "./values/Builtin/formatNumber";

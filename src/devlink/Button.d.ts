@@ -1,11 +1,10 @@
 import * as React from "react";
 import * as Types from "./types";
 
-declare function CardComponent(props: {
+declare function Button(props: {
   as?: React.ElementType;
-  title?: React.ReactNode;
-  description?: React.ReactNode;
+  link?: Types.Basic.Link;
   image?: Types.Asset.Image;
+  text?: React.ReactNode;
+  imagePosition?: "left" | "right";
 }): React.JSX.Element;
-
-export { CardComponent };

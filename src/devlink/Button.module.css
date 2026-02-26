@@ -1,0 +1,58 @@
+.button {
+  display: inline-flex;
+
+  box-sizing: content-box;
+
+  height: 48px;
+  padding-right: 24px;
+  padding-left: 24px;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  order: 0;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+
+  border-style: solid;
+  border-width: 3px;
+  border-color: hsla(0, 0.00%, 100.00%, 0.30);
+  border-radius: 100px;
+
+  background-image: linear-gradient(135deg, #77c0a8, #009680);
+
+  transition: all 300ms cubic-bezier(.645, .045, .355, 1);
+
+  color: var(--_color---semantic--text--primary-inverse);
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.button:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 -1px 20px 20px rgba(0,0,0,0.2);
+}
+
+.button.inverse {
+  background-image: linear-gradient(135deg, hsla(0, 0.00%, 100.00%, 0.60), hsla(0, 0.00%, 100.00%, 0.50));
+  color: var(--_color---semantic--text--primary);
+}
+
+.button.inverse:hover {
+  box-shadow: inset 0 -1px 20px 20px hsla(171.20000000000002, 100.00%, 29.41%, 0.40);
+}
+
+.button.secondary {
+  background-image: none;
+}
+
+.button.secondary:hover {
+  box-shadow: inset 0 -1px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.button-icon {
+  color: var(--_color---semantic--text--primary-inverse);
+}
+
+#w-node-_2b403927-68c1-0538-a1f3-9c568d7cba75-8d7cba75 {
+}
