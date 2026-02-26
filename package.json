@@ -13,13 +13,14 @@
   },
   "dependencies": {
     "next": "^15.2.8",
+    "opennextjs-cloudflare": "^1.0.0",
     "react": "^19.0.1",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250415.0",
     "@eslint/eslintrc": "^3",
-    "@opennextjs/cloudflare": "^1.6.5",
+    "@opennextjs/cloudflare": "^1.17.1",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -29,6 +30,6 @@
     "postcss-import": "^16.1.0",
     "tailwindcss": "^4",
     "typescript": "^5",
-    "wrangler": "^4.11.1"
+    "wrangler": "^4.68.1"
   }
 }
