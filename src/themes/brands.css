@@ -1,0 +1,72 @@
+/* Brand A — Boni (mother brand, uses Webflow's existing tokens) */
+[data-brand="boni"] {
+  --brand-primary: #00ac8e;
+  --brand-primary-dark: #007463;
+  --brand-primary-darker: #004c41;
+  --brand-secondary: #fab041;
+  --brand-background: #f9f6f0;
+  --brand-surface: #ffffff;
+  --brand-text-primary: #2f2f2f;
+  --brand-text-secondary: #595959;
+  --brand-accent: #7857bc;
+  --brand-font-family: "Fredoka", sans-serif;
+  --brand-radius: 48px;
+  --brand-radius-sm: 24px;
+
+  /* Override the Webflow design tokens so DevLink components inherit the brand */
+  --_color---primary-green: var(--brand-primary);
+  --_color---semantic--background--primary: var(--brand-background);
+  --_color---semantic--background--secondary: var(--brand-surface);
+  --_color---semantic--text--primary: var(--brand-text-primary);
+  --_color---semantic--text--secondary: var(--brand-text-secondary);
+  --_color---semantic--background--brand-dark: var(--brand-primary-dark);
+  --_color---semantic--background--brand-darker: var(--brand-primary-darker);
+}
+
+/* Brand B — FreshMart (sub-brand, different personality) */
+[data-brand="freshmart"] {
+  --brand-primary: #1a5eae;
+  --brand-primary-dark: #0e3f78;
+  --brand-primary-darker: #0a2a52;
+  --brand-secondary: #e25f59;
+  --brand-background: #f0f4f9;
+  --brand-surface: #ffffff;
+  --brand-text-primary: #1a1a2e;
+  --brand-text-secondary: #4a4a6a;
+  --brand-accent: #fab041;
+  --brand-font-family: "Inter", sans-serif;
+  --brand-radius: 16px;
+  --brand-radius-sm: 8px;
+
+  --_color---primary-green: var(--brand-primary);
+  --_color---semantic--background--primary: var(--brand-background);
+  --_color---semantic--background--secondary: var(--brand-surface);
+  --_color---semantic--text--primary: var(--brand-text-primary);
+  --_color---semantic--text--secondary: var(--brand-text-secondary);
+  --_color---semantic--background--brand-dark: var(--brand-primary-dark);
+  --_color---semantic--background--brand-darker: var(--brand-primary-darker);
+}
+
+/* Brand C — Natuurwinkel (sub-brand, organic/earthy) */
+[data-brand="natuurwinkel"] {
+  --brand-primary: #6b8e23;
+  --brand-primary-dark: #4a6318;
+  --brand-primary-darker: #2d3d0f;
+  --brand-secondary: #d2691e;
+  --brand-background: #faf8f2;
+  --brand-surface: #ffffff;
+  --brand-text-primary: #2d2a1e;
+  --brand-text-secondary: #6b6348;
+  --brand-accent: #8b4513;
+  --brand-font-family: "Fredoka", sans-serif;
+  --brand-radius: 24px;
+  --brand-radius-sm: 12px;
+
+  --_color---primary-green: var(--brand-primary);
+  --_color---semantic--background--primary: var(--brand-background);
+  --_color---semantic--background--secondary: var(--brand-surface);
+  --_color---semantic--text--primary: var(--brand-text-primary);
+  --_color---semantic--text--secondary: var(--brand-text-secondary);
+  --_color---semantic--background--brand-dark: var(--brand-primary-dark);
+  --_color---semantic--background--brand-darker: var(--brand-primary-darker);
+}

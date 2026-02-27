@@ -3,6 +3,7 @@
 
 /* Webflow global styles are imported in the 'webflow' layer */
 @import "../devlink/global.css" layer(webflow);
+@import "../themes/brands.css" layer(components);
 @import "tailwindcss";
 
 :root {
