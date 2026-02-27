@@ -7,15 +7,15 @@ import { useBrand } from "@/themes/BrandProvider";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/recipes", label: "Recipes" },
+  { href: "/components", label: "Components" },
   { href: "/winkels", label: "Stores" },
   { href: "/poc", label: "POC Findings" },
 ];
 
-export function SiteNavigation() {
+export const SiteNavigation = () => {
   const pathname = usePathname();
   const { brandName } = useBrand();
 
-  // Strip basePath for matching
   const currentPath = pathname.replace(/^\/app/, "") || "/";
 
   return (
@@ -36,7 +36,6 @@ export function SiteNavigation() {
         fontFamily: "var(--brand-font-family, Fredoka, sans-serif)",
       }}
     >
-      {/* Logo / Brand name */}
       <Link
         href="/"
         style={{
@@ -50,7 +49,6 @@ export function SiteNavigation() {
         {brandName}
       </Link>
 
-      {/* Nav links */}
       <div style={{ display: "flex", gap: 4 }}>
         {navItems.map((item) => {
           const isActive =
@@ -71,7 +69,7 @@ export function SiteNavigation() {
                   ? "var(--brand-primary, var(--_color---primary-green))"
                   : "var(--brand-text-secondary, var(--_color---semantic--text--secondary))",
                 background: isActive
-                  ? "var(--brand-primary, var(--_color---primary-green))15"
+                  ? "rgba(0, 172, 142, 0.08)"
                   : "transparent",
                 textDecoration: "none",
                 transition: "all 0.2s ease",
@@ -84,4 +82,4 @@ export function SiteNavigation() {
       </div>
     </nav>
   );
-}
+};

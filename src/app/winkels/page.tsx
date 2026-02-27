@@ -14,7 +14,7 @@ export default function WinkelsPage() {
         style={{
           padding: "80px 24px 32px",
           textAlign: "center",
-          maxWidth: 800,
+          maxWidth: 1200,
           margin: "0 auto",
         }}
       >

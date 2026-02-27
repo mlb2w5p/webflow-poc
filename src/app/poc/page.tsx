@@ -173,7 +173,7 @@ export default function PocPage() {
         style={{
           padding: "80px 24px 40px",
           textAlign: "center",
-          maxWidth: 800,
+          maxWidth: 1200,
           margin: "0 auto",
         }}
       >
@@ -265,7 +265,7 @@ export default function PocPage() {
       <section
         style={{
           padding: "0 24px 80px",
-          maxWidth: 1000,
+          maxWidth: 1200,
           margin: "0 auto",
         }}
       >
@@ -393,7 +393,7 @@ export default function PocPage() {
       <section
         style={{
           padding: "48px 24px",
-          maxWidth: 1000,
+          maxWidth: 1200,
           margin: "0 auto 80px",
           borderRadius: "var(--brand-radius-sm, 24px)",
           background:

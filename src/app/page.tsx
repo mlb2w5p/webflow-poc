@@ -19,6 +19,13 @@ const pocSections = [
     color: "#1a5eae",
   },
   {
+    href: "/components",
+    title: "🧩 Webflow Code Components",
+    description:
+      "RecipeCard and IngredientChecklist — custom React components registered via .webflow.tsx files. Designers configure props in the Designer, logic runs in React.",
+    color: "#e65100",
+  },
+  {
     href: "/poc",
     title: "📋 POC Findings",
     description:
@@ -43,7 +50,7 @@ export default function Home() {
         style={{
           padding: "100px 24px 60px",
           textAlign: "center",
-          maxWidth: 800,
+          maxWidth: 1200,
           margin: "0 auto",
         }}
       >
@@ -113,7 +120,7 @@ export default function Home() {
       <section
         style={{
           padding: "0 24px 80px",
-          maxWidth: 1000,
+          maxWidth: 1200,
           margin: "0 auto",
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
@@ -192,7 +199,7 @@ export default function Home() {
       <section
         style={{
           padding: "48px 24px",
-          maxWidth: 1000,
+          maxWidth: 1200,
           margin: "0 auto 80px",
           borderRadius: "var(--brand-radius-sm, 24px)",
           background:

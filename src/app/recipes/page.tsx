@@ -16,7 +16,7 @@ export default async function RecipesPage() {
         style={{
           padding: "80px 24px 40px",
           textAlign: "center",
-          maxWidth: 800,
+          maxWidth: 1200,
           margin: "0 auto",
         }}
       >

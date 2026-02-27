@@ -13,5 +13,13 @@
       "lastPrompted": 1772115017946,
       "version": "1.12.2"
     }
+  },
+  "library": {
+    "components": [
+      "**/*.webflow.@(js|jsx|mjs|ts|tsx)"
+    ],
+    "name": "Webflow POC Code Components",
+    "description": "Custom code components",
+    "id": "webflow-poc-code-components"
   }
 }
