@@ -20,7 +20,7 @@ export default function ComponentsPage() {
     ? selectedRecipe.ingredients
         .split(",")
         .map((s) => s.trim())
-        .join("\n")
+        .join("; ")
     : "";
 
   return (

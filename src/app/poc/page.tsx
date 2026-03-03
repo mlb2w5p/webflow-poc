@@ -12,16 +12,18 @@ interface Finding {
 
 const findings: Finding[] = [
   {
-    title: "DevLink is One-Way Only",
-    status: "⚠️",
+    title: "DevLink sync is one-way, but Code Components bridge the gap",
+    status: "✅",
     category: "Architecture",
     description:
-      "Components are only synced from Webflow Designer to code. Custom React components CANNOT be pushed back to Webflow.",
+      "DevLink syncs Webflow-designed components to code (one-way). But Webflow Code Components flip this: custom React components can be registered and used directly inside the Webflow Designer.",
     details: [
-      "The devlink/ folder is completely overwritten on every sync.",
-      "Custom components must be created outside devlink/ (src/components/).",
-      "This means: design in Webflow, enrich in code.",
-      "Webflow Designer remains the 'single source of truth' for visual design.",
+      "The devlink/ folder is auto-generated and must stay read-only.",
+      "Custom components live in src/components/ and are never overwritten.",
+      "Webflow Code Components (.webflow.tsx) expose React components to the Designer.",
+      "Designers can drag RecipeCard and IngredientChecklist onto any Webflow page.",
+      "Props (text, variants, booleans) are configurable via the Designer's settings panel.",
+      "This makes the flow genuinely bidirectional: Webflow ↔ Code.",
     ],
   },
   {
@@ -94,6 +96,20 @@ const findings: Finding[] = [
     ],
   },
   {
+    title: "Webflow Code Components in the Designer",
+    status: "✅",
+    category: "Workflow",
+    description:
+      "Custom React components registered via .webflow.tsx files appear as draggable components in the Webflow Designer. Designers configure props visually — no code knowledge required.",
+    details: [
+      "RecipeCard: designer picks a recipe slug from a dropdown — card renders live data.",
+      "IngredientChecklist: designer types ingredients separated by semicolons in a text field.",
+      "Props are limited to scalar types (Text, Number, Boolean, Variant) — no arrays or objects.",
+      "Components render in a sandboxed iframe; must not use Next.js router hooks or app contexts.",
+      "Enables a clean handoff: designers own layout, developers own logic.",
+    ],
+  },
+  {
     title: "Deployment (Cloudflare / Vercel)",
     status: "✅",
     category: "Infrastructure",
@@ -134,17 +150,17 @@ const findings: Finding[] = [
   },
   {
     title: "DevLink Limitations",
-    status: "❌",
+    status: "⚠️",
     category: "Limitations",
     description:
-      "Some limitations relevant for the multi-brand use case.",
+      "Some limitations remain, though Webflow Code Components resolve the biggest one (custom components in the Designer).",
     details: [
-      "No bidirectional sync — code changes are lost on sync.",
-      "Webflow Interactions are generated as JSON blobs (hard to modify).",
-      "CMS collections not available via DevLink.",
-      "No TypeScript generated types for component props (only .d.ts).",
-      "devlink/ folder must be treated as 'read-only'.",
-      "Webflow plan requires Enterprise or Workspace plan for DevLink.",
+      "devlink/ sync is still one-way — code edits inside devlink/ are lost on re-sync.",
+      "Webflow Interactions are generated as JSON blobs (hard to modify in code).",
+      "CMS collections are not available via DevLink — use a separate API/CMS.",
+      "Code Component props are limited to scalar types: Text, Number, Boolean, Variant — no arrays or objects.",
+      "Code components must not use Next.js router hooks or app contexts (sandboxed iframe in Designer).",
+      "Webflow plan requires an Enterprise or Workspace plan for DevLink + Code Components.",
     ],
   },
 ];
@@ -398,7 +414,7 @@ export default function PocPage() {
           borderRadius: "var(--brand-radius-sm, 24px)",
           background:
             "var(--brand-primary-darker, var(--_color---semantic--background--brand-darker))",
-          color: "#fff",
+          color: "var(--_color---semantic--text--primary-inverse, #fff)",
           fontFamily: "var(--brand-font-family, Fredoka, sans-serif)",
         }}
       >
@@ -422,13 +438,16 @@ export default function PocPage() {
             textAlign: "center",
           }}
         >
-          <p>
+          <p style={{ color: "var(--_color---semantic--text--primary-inverse)" }}>
             Webflow + DevLink is a strong choice as a <strong>design-to-code pipeline</strong>. Designers work in Webflow Designer, developers enrich with APIs, theming, and interaction in Next.js.
           </p>
-          <p>
+          <p style={{ color: "var(--_color---semantic--text--primary-inverse)" }}>
+            <strong>Webflow Code Components</strong> make this genuinely bidirectional: custom React components (RecipeCard, IngredientChecklist) are available directly in the Designer. Designers configure props visually while the logic runs in React — no code changes needed.
+          </p>
+          <p style={{ color: "var(--_color---semantic--text--primary-inverse)" }}>
             For <strong>multi-brand</strong> the platform is suitable via CSS Custom Properties, but requires discipline: the devlink/ folder is read-only and all custom logic lives in src/components/.
           </p>
-          <p style={{ opacity: 0.7, fontSize: 14 }}>
+          <p style={{ color: "var(--_color---semantic--text--primary-inverse)", opacity: 0.7, fontSize: 14 }}>
             Current brand: <strong>{brandName}</strong> — switch in the bottom right to see the theme system in action.
           </p>
         </div>

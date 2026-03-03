@@ -13,9 +13,9 @@ export default declareComponent(IngredientChecklist, {
       defaultValue: "Ingredients",
     }),
     ingredients: props.Text({
-      name: "Ingredients (one per line)",
+      name: "Ingredients (separated by semicolons)",
       defaultValue:
-        "2 bananas\n200g yoghurt\n50g granola\n1 kiwi\n30g honey\n100g mixed berries",
+        "2 bananas; 200g yoghurt; 50g granola; 1 kiwi; 30g honey; 100g mixed berries",
     }),
   },
 });

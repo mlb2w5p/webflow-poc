@@ -9,10 +9,11 @@ interface IngredientChecklistProps {
 
 export const IngredientChecklist = ({
   title = "Ingredients",
-  ingredients = "2 bananas\n200g yoghurt\n50g granola\n1 kiwi\n30g honey\n100g mixed berries",
+  ingredients = "2 bananas; 200g yoghurt; 50g granola; 1 kiwi; 30g honey; 100g mixed berries",
 }: IngredientChecklistProps) => {
+  // Split on semicolons — designer-friendly since Webflow's text input doesn't support newlines
   const items = ingredients
-    .split("\n")
+    .split(";")
     .map((s) => s.trim())
     .filter(Boolean);
 

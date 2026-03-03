@@ -233,7 +233,7 @@ export default function Home() {
               sub: "Visual design",
               icon: "🎨",
             },
-            { label: "DevLink (one-way)", sub: "Auto-gen components", icon: "🔗" },
+            { label: "DevLink", sub: "Auto-gen components", icon: "🔗" },
             { label: "Next.js App", sub: "Pages + API integration", icon: "⚡" },
             { label: "Brand Themes", sub: "CSS custom properties", icon: "🎭" },
             { label: "Cloudflare", sub: "Edge deployment", icon: "☁️" },
