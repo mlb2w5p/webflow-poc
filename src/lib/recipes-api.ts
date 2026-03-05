@@ -1,3 +1,10 @@
+export interface Nutrition {
+  protein: number;  // grams
+  carbs: number;    // grams
+  fat: number;      // grams
+  fiber: number;    // grams
+}
+
 export interface Recipe {
   slug: string;
   title: string;
@@ -11,6 +18,7 @@ export interface Recipe {
   difficulty: "Makkelijk" | "Gemiddeld" | "Moeilijk";
   steps: string[];
   tags: string[];
+  nutrition: Nutrition;
 }
 
 export const recipes: Recipe[] = [
@@ -36,6 +44,7 @@ export const recipes: Recipe[] = [
       "Top af met granola en serveer direct.",
     ],
     tags: ["Ontbijt", "Gezond", "Snel klaar"],
+    nutrition: { protein: 12, carbs: 58, fat: 8, fiber: 6 },
   },
   {
     slug: "pasta-pesto-kip",
@@ -59,6 +68,7 @@ export const recipes: Recipe[] = [
       "Serveer met rucola en Parmezaanse kaas.",
     ],
     tags: ["Diner", "Pasta", "Snel klaar"],
+    nutrition: { protein: 38, carbs: 62, fat: 14, fiber: 4 },
   },
   {
     slug: "tomatensoep",
@@ -82,6 +92,7 @@ export const recipes: Recipe[] = [
       "Serveer met verse basilicum en brood.",
     ],
     tags: ["Lunch", "Soep", "Comfort food"],
+    nutrition: { protein: 6, carbs: 28, fat: 10, fiber: 5 },
   },
   {
     slug: "griekse-salade",
@@ -105,6 +116,7 @@ export const recipes: Recipe[] = [
       "Besprenkel met olijfolie en serveer.",
     ],
     tags: ["Lunch", "Salade", "Vegetarisch"],
+    nutrition: { protein: 14, carbs: 18, fat: 22, fiber: 4 },
   },
   {
     slug: "banana-pancakes",
@@ -128,6 +140,7 @@ export const recipes: Recipe[] = [
       "Serveer met ahornsiroop en verse bosbessen.",
     ],
     tags: ["Ontbijt", "Gezond", "Vegetarisch"],
+    nutrition: { protein: 16, carbs: 54, fat: 10, fiber: 7 },
   },
   {
     slug: "kipkerrie-rijst",
@@ -151,6 +164,7 @@ export const recipes: Recipe[] = [
       "Voeg de kip terug en serveer met rijst en koriander.",
     ],
     tags: ["Diner", "Aziatisch", "Comfort food"],
+    nutrition: { protein: 42, carbs: 68, fat: 18, fiber: 3 },
   },
 ];
 

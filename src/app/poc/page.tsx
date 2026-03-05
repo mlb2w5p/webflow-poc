@@ -96,17 +96,18 @@ const findings: Finding[] = [
     ],
   },
   {
-    title: "Webflow Code Components in the Designer",
+    title: "External npm Libraries as Code Components",
     status: "✅",
     category: "Workflow",
     description:
-      "Custom React components registered via .webflow.tsx files appear as draggable components in the Webflow Designer. Designers configure props visually — no code knowledge required.",
+      "Any React-compatible npm package can be wrapped as a Webflow Code Component. Demonstrated with lucide-react (icons) and recharts (charts) — capabilities Webflow has no native equivalent for.",
     details: [
-      "RecipeCard: designer picks a recipe slug from a dropdown — card renders live data.",
-      "IngredientChecklist: designer types ingredients separated by semicolons in a text field.",
-      "Props are limited to scalar types (Text, Number, Boolean, Variant) — no arrays or objects.",
-      "Components render in a sandboxed iframe; must not use Next.js router hooks or app contexts.",
-      "Enables a clean handoff: designers own layout, developers own logic.",
+      "lucide-react: 1500+ icons, designer picks from a dropdown — zero Webflow equivalent.",
+      "recharts: full bar/line/pie chart library, designer selects recipe and orientation.",
+      "Wrap pattern: create a .tsx component + a .webflow.tsx declaration — that's it.",
+      "⚠️ Heavy libraries (recharts ~100 kB) should be lazy-loaded with next/dynamic to avoid bloating other pages.",
+      "Lightweight libraries (lucide-react, date-fns, etc.) can be imported directly.",
+      "This means the Webflow Designer gains capabilities from the entire npm ecosystem.",
     ],
   },
   {
